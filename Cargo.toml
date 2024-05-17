@@ -1,0 +1,29 @@
+[package]
+name = "rudis"
+version = "0.0.0"
+edition = "2018"
+authors = ["sarail"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+atoi = "2.0.0"
+bytes = "1.6.0"
+tokio = { version = "1.37.0", features = ["full"] }
+tokio-stream = "0.1.15"
+log = "0.4.21"
+tracing = "0.1.40"
+structopt = "0.3.26"
+tracing-subscriber = "0.3.18"
+
+[[example]]
+name = "hello-redis"
+path = "examples/hello-redis.rs"
+
+[[bin]]
+name = "server"
+path = "src/bin/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/bin/client.rs"
